@@ -13,10 +13,12 @@ family=Overpass+Mono\
     background-color: #242424;
     color: white;
     font-family: Overpass;
+    font-weight: normal;
 }
 
-body {
-    /**/
+h1 {
+    color: #64F295;
+    font-weight: bold;
 }
 
 #toplangschart {
