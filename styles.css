@@ -61,6 +61,32 @@ p {
     font-size: 1rem;
 }
 
+b {
+    color: var(--title-colour);
+    font-family: Overpass;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+s, i {
+    color: var(--text-colour);
+    font-family: Overpass;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+ul {
+    margin: 0.5rem;
+}
+
+li {
+    margin: 0.5rem;
+    color: var(--text-colour);
+    font-family: Overpass;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
 #toplangschart {
     font-family: "Overpass Mono";
 }
