@@ -1,13 +1,5 @@
-@import url("https://fonts.googleapis.com/\
-css2?\
-family=Overpass:ital,wght@0,400;0,700;1,400\
-&display=swap");
-
-@import url("https://fonts.googleapis.com/\
-css2?\
-family=Overpass+Mono\
-&family=Overpass:ital,wght@0,400;0,700;1,400\
-&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
     --default-background: #343434;
@@ -26,6 +18,26 @@ family=Overpass+Mono\
 
 body {
     background-color: var(--default-background);
+}
+
+header {
+    margin: 0;
+    padding: 1rem;
+    top: 0;
+    position: sticky;
+    background-color: rgba(52, 52, 52, 0.8);
+    border-bottom: 0.15rem solid var(--container-background);
+	backdrop-filter: blur(1rem);
+}
+
+a {
+    font-family: Overpass;
+    color: var(--title-colour);
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .container {
