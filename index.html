@@ -16,71 +16,73 @@
             <h1><a>decroghlangs</a></h1>
         </header>
 
-        <div class="container">
-            <p>
-                Decroghlangs is a <s><i>webapp</i></s> fetching tool
-                that pulls data about programming languages usage
-                in one's public GitHub repositories.
-            </p>
-        </div>
-
-        <div class="container">
-            <p>
-                Fill in the form below,
-                then click the button
-                in order to get your desired data.
-            </p>
-            
-            <div>
-                <label for="form_ghusername">
-                    GitHub username
-                </label>
-
-                <input
-                    id="form_ghusername"
-                    type="text"
-                    value="myawesomeusername"
-                >
-
-                <input id="form_submit" type="button" value="Submit">
+        <article>
+            <div class="container">
+                <p>
+                    Decroghlangs is a <s><i>webapp</i></s> fetching tool
+                    that pulls data about programming languages usage
+                    in one's public GitHub repositories.
+                </p>
             </div>
-        </div>
 
-        <div class="container">
-            <p id="toplangschart">
-                The results will appear here once they are loaded...
-            </p>
-        </div>
+            <div class="container">
+                <p>
+                    Fill in the form below,
+                    then click the button
+                    in order to get your desired data.
+                </p>
+            
+                <div>
+                    <label for="form_ghusername">
+                        GitHub username
+                    </label>
 
-        <div class="container">
-            <p>
-                <b>Important:</b>
-                if you don't see your results,
-                here are some reasons why:
-            </p>
+                    <input
+                        id="form_ghusername"
+                        type="text"
+                        value="myawesomeusername"
+                    >
 
-            <ul>
-                <li>The username is wrong;</li>
+                    <input id="form_submit" type="button" value="Submit">
+                </div>
+            </div>
+
+            <div class="container">
+                <p id="toplangschart">
+                    The results will appear here once they are loaded...
+                </p>
+            </div>
+
+            <div class="container">
+                <p>
+                    <b>Important:</b>
+                    if you don't see your results,
+                    here are some reasons why:
+                </p>
+
+                <ul>
+                    <li>The username is wrong;</li>
                 
-                <li>
-                    You have sent too many requests
-                    (wait some time before continuing);
-                </li>
+                    <li>
+                        You have sent too many requests
+                        (wait some time before continuing);
+                    </li>
 
-                <li>The user simply does not exist;</li>
-                <li>The user does not have public repositories;</li>
-            </ul>
-        </div>
+                    <li>The user simply does not exist;</li>
+                    <li>The user does not have public repositories;</li>
+                </ul>
+            </div>
 
-        <div class="container">
-            <p>
-                <b>Important:</b>
-                if your results seem to be inaccurate,
-                check if you have a lot of repositories.
-                Currently, this tool will only check
-                your 50 most recent ones.
-            </p>
-        </div>
+            <div class="container">
+                <p>
+                    <b>Important:</b>
+                    if your results seem to be inaccurate,
+                    check if you have a lot of repositories.
+                    Currently, this tool will only check
+                    your 50 most recent ones.
+                </p>
+            </div>
+        </article>
 
         <footer>
             <p>Copyright &copy; 2022 Guilherme Neves</p>

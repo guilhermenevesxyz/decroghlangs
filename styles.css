@@ -17,14 +17,21 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background-color: var(--default-background);
 }
 
 header {
     margin: 0;
     padding: 1rem;
-    top: 0;
     position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: rgba(52, 52, 52, 0.8);
     border-bottom: 0.15rem solid var(--container-background);
 	backdrop-filter: blur(1rem);
@@ -33,7 +40,9 @@ header {
 footer {
     margin: 0;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: var(--container-background);
 }
 
