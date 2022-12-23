@@ -60,6 +60,10 @@ footer > p {
     font-size: 0.9rem;
 }
 
+.section {
+    border-bottom: 0.15rem solid var(--container-background);
+}
+
 a {
     font-family: Overpass;
     color: var(--title-colour);
@@ -71,10 +75,37 @@ a:hover {
 }
 
 h2 {
+    margin: 1rem;
     color: var(--text-colour);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1.5rem;
+}
+
+h3 {
+    margin: 1rem;
+    padding: 0.5rem;
+    color: var(--text-colour);
+    font-family: Overpass;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.faq-question {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: rgb(52, 52, 52);
+    box-shadow: 0 0 1.5rem rgb(10, 10, 10);
+    border-radius: 1.5rem;
+}
+
+.faq-question > * {
+    flex: 1;
 }
 
 .container {

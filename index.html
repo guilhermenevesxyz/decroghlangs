@@ -17,68 +17,73 @@
         </header>
 
         <article>
-            <h2>
-                Decroghlangs is a fetching tool
-                that pulls data about programming languages usage
-                in one's public GitHub repositories.
-            </h2>
+            <div class="section">
+                <h2>
+                    Decroghlangs is a fetching tool
+                    that pulls data about programming languages usage
+                    in one's public GitHub repositories.
+                </h2>
+            </div>
 
-            <div class="container">
-                <p>
-                    Fill in the form below,
-                    then click the button
-                    in order to get your desired data.
-                </p>
+            <div class="section">
+                <div class="container">
+                    <p>
+                        Fill in the form below,
+                        then click the button
+                        in order to get your desired data.
+                    </p>
             
-                <div>
-                    <label for="form_ghusername">
-                        GitHub username
-                    </label>
+                    <div>
+                        <label for="form_ghusername">
+                            GitHub username
+                        </label>
 
-                    <input
-                        id="form_ghusername"
-                        type="text"
-                        value="myawesomeusername"
-                    >
+                        <input
+                            id="form_ghusername"
+                            type="text"
+                            value="myawesomeusername"
+                        >
 
-                    <input id="form_submit" type="button" value="Submit">
+                        <input id="form_submit" type="button" value="Submit">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <p id="toplangschart">
+                        The results will appear here once they are loaded...
+                    </p>
                 </div>
             </div>
 
-            <div class="container">
-                <p id="toplangschart">
-                    The results will appear here once they are loaded...
-                </p>
-            </div>
+            <div class="section">
+                <div class="faq-question">
+                    <h3>I don't see my results!</h3>
 
-            <div class="container">
-                <p>
-                    <b>Important:</b>
-                    if you don't see your results,
-                    here are some reasons why:
-                </p>
+                    <div>
+                        <p>
+                            If you don't see your results,
+                            here are some precautions to take:
+                        </p>
 
-                <ul>
-                    <li>The username is wrong;</li>
-                
-                    <li>
-                        You have sent too many requests
-                        (wait some time before continuing);
-                    </li>
+                        <ul>
+                            <li>Check the username's spelling;</li>
+                            <li>Check whether the user actually exists;</li>
+                            <li>Make sure the user has public repositories;</li>
+                            <li>Wait awhile and try again later.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <li>The user simply does not exist;</li>
-                    <li>The user does not have public repositories;</li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <p>
-                    <b>Important:</b>
-                    if your results seem to be inaccurate,
-                    check if you have a lot of repositories.
-                    Currently, this tool will only check
-                    your 50 most recent ones.
-                </p>
+                <div class="faq-question">
+                    <h3>My results seem to be inaccurate!</h3>
+                    
+                    <p>
+                        In case your results seem to be inaccurate,
+                        check if the user has many repositories.
+                        Currently, this tool will only check
+                        the 50 most recent ones.
+                    </p>
+                </div>
             </div>
         </article>
 
