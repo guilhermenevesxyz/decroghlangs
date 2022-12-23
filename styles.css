@@ -30,6 +30,17 @@ header {
 	backdrop-filter: blur(1rem);
 }
 
+footer {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--container-background);
+}
+
+footer > p {
+    font-size: 0.9rem;
+}
+
 a {
     font-family: Overpass;
     color: var(--title-colour);
