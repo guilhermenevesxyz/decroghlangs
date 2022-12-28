@@ -1,11 +1,7 @@
-/* Overpass font */
-@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
+/* JetBrains Mono font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-/* Overpass Mono font */
-@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
-
-$font-1: "Overpass Mono";
-$font-2: "Overpass";
+$font-1: "JetBrains Mono";
 
 :root {
     /* Colour variables */
@@ -15,11 +11,6 @@ $font-2: "Overpass";
     --colour-fg-2: #64F295;
     --colour-attention: #000000;
     --colour-action: #249255;
-}
-
-/* Default styles */
-* {
-    font-family: $font-1;
 }
 
 body {
@@ -71,7 +62,7 @@ footer {
 }
 
 a {
-    font-family: Overpass;
+    font-family: $font-1;
     color: var(--colour-fg-2);
 
     &:hover {
@@ -83,7 +74,7 @@ a {
 h2 {
     margin: 1rem;
     color: var(--colour-fg-1);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1.5rem;
 }
@@ -92,7 +83,7 @@ h3 {
     margin: 1rem;
     padding: 0;
     color: var(--colour-fg-1);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1.5rem;
     text-align: center;
@@ -140,7 +131,7 @@ h3 {
 h1 {
     margin: 0.5rem;
     color: var(--colour-fg-2);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: bold;
     font-size: 2rem;
 }
@@ -148,7 +139,7 @@ h1 {
 p {
     margin: 0.5rem;
     color: var(--colour-fg-1);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1rem;
 }
@@ -161,20 +152,20 @@ ul {
 li {
     margin: 0.5rem;
     color: var(--colour-fg-1);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1rem;
 }
 
 #toplangschart {
-    font-family: "Overpass Mono";
+    font-family: $font-1;
 }
 
 label {
     margin: 0.5rem;
     display: inline-block;
     color: var(--colour-fg-1);
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1rem;
 }
@@ -187,7 +178,7 @@ input {
     background-color: var(--colour-bg-1);
     border: none;
     border-radius: 1rem;
-    font-family: Overpass;
+    font-family: $font-1;
     font-weight: normal;
     font-size: 1rem;
 
