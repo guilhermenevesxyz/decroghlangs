@@ -2,12 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 :root {
   /* Colour variables */
-  --colour-bg-1: #343434;
-  --colour-bg-2: #141414;
-  --colour-fg-1: white;
-  --colour-fg-2: #64F295;
-  --colour-attention: #000000;
-  --colour-action: #249255;
+  --colour-bg-1: rgb(25, 25, 25);
+  --colour-bg-2: rgb(45, 45, 45);
+  --colour-fg-1: rgb(215, 215, 215);
+  --colour-fg-2: rgb(230, 230, 230);
+  --colour-action: rgb(225, 100, 85);
 }
 
 body {
@@ -26,7 +25,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(52, 52, 52, 0.8);
+  background-color: rgba(var(--colour-bg-1), 0.8);
   border-bottom: 0.15rem solid var(--colour-bg-2);
   backdrop-filter: blur(1rem);
 }
@@ -92,8 +91,8 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: left;
-  background-color: rgb(52, 52, 52);
-  box-shadow: 0 0 1.5rem rgb(10, 10, 10);
+  background-color: var(--colour-bg-2);
+  box-shadow: 0 0.5rem 1.5rem var(--colour-bg-2);
   border-radius: 1.5rem;
 }
 .faq-question > * {
