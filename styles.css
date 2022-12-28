@@ -123,6 +123,10 @@ h3 {
         margin: 1rem;
         width: auto;
     }
+
+    .faq-question {
+        flex-direction: column;
+    }
 }
 
 h1 {
