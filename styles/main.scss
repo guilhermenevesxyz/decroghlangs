@@ -78,6 +78,7 @@ h1 {
     font-size: $fontsize-extra-big;
     font-weight: bold;
     color: var(--colour-fg-2);
+    text-shadow: 0 0 1rem var(--colour-action);
 }
 
 h2 {

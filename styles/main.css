@@ -62,6 +62,7 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   color: var(--colour-fg-2);
+  text-shadow: 0 0 1rem var(--colour-action);
 }
 
 h2 {
