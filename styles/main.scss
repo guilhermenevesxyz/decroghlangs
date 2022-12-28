@@ -1,19 +1,25 @@
+/* Overpass font */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Overpass Mono font */
 @import url("https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
 
-:root {
-    --default-background: #343434;
-    --container-background: #141414;
-    --button-background: #249255;
+$font-1: "Overpass Mono";
+$font-2: "Overpass";
 
-    --title-colour: #64F295;
-    --text-colour: white;
+:root {
+    /* Colour variables */
+    --colour-bg-1: #343434;
+    --colour-bg-2: #141414;
+    --colour-fg-1: white;
+    --colour-fg-2: #64F295;
+    --colour-attention: #000000;
+    --colour-action: #249255;
 }
 
+/* Default styles */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Overpass Mono";
+    font-family: $font-1;
 }
 
 body {
@@ -21,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background-color: var(--default-background);
+    background-color: var(--colour-bg-1);
 }
 
 header {
@@ -33,7 +39,7 @@ header {
     flex-direction: row;
     justify-content: center;
     background-color: rgba(52, 52, 52, 0.8);
-    border-bottom: 0.15rem solid var(--container-background);
+    border-bottom: 0.15rem solid var(--colour-bg-2);
 	backdrop-filter: blur(1rem);
 }
 
@@ -53,30 +59,30 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--container-background);
-}
+    background-color: var(--colour-bg-2);
 
-footer > p {
-    font-size: 0.9rem;
+    & > p {
+        font-size: 0.9rem;
+    }
 }
 
 .section {
-    border-bottom: 0.15rem solid var(--container-background);
+    border-bottom: 0.15rem solid var(--colour-bg-2);
 }
 
 a {
     font-family: Overpass;
-    color: var(--title-colour);
-}
+    color: var(--colour-fg-2);
 
-a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 h2 {
     margin: 1rem;
-    color: var(--text-colour);
+    color: var(--colour-fg-1);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1.5rem;
@@ -84,11 +90,12 @@ h2 {
 
 h3 {
     margin: 1rem;
-    padding: 0.5rem;
-    color: var(--text-colour);
+    padding: 0;
+    color: var(--colour-fg-1);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .faq-question {
@@ -102,17 +109,18 @@ h3 {
     background-color: rgb(52, 52, 52);
     box-shadow: 0 0 1.5rem rgb(10, 10, 10);
     border-radius: 1.5rem;
-}
 
-.faq-question > * {
-    flex: 1;
+    & > * {
+        flex: 1;
+        width: 100%;
+    }
 }
 
 .container {
     width: 40rem;
     margin: 1rem auto;
     padding: 1rem;
-    background-color: var(--container-background);
+    background-color: var(--colour-bg-2);
     border-radius: 1rem;
 }
 
@@ -131,7 +139,7 @@ h3 {
 
 h1 {
     margin: 0.5rem;
-    color: var(--title-colour);
+    color: var(--colour-fg-2);
     font-family: Overpass;
     font-weight: bold;
     font-size: 2rem;
@@ -139,21 +147,7 @@ h1 {
 
 p {
     margin: 0.5rem;
-    color: var(--text-colour);
-    font-family: Overpass;
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-b {
-    color: var(--title-colour);
-    font-family: Overpass;
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-s, i {
-    color: var(--text-colour);
+    color: var(--colour-fg-1);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1rem;
@@ -161,11 +155,12 @@ s, i {
 
 ul {
     margin: 0.5rem;
+    padding: 0;
 }
 
 li {
     margin: 0.5rem;
-    color: var(--text-colour);
+    color: var(--colour-fg-1);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1rem;
@@ -178,7 +173,7 @@ li {
 label {
     margin: 0.5rem;
     display: inline-block;
-    color: var(--text-colour);
+    color: var(--colour-fg-1);
     font-family: Overpass;
     font-weight: normal;
     font-size: 1rem;
@@ -188,23 +183,24 @@ input {
     margin: 0.5rem;
     padding: 0.5rem;
     display: inline-block;
-    color: var(--text-colour);
-    background-color: var(--default-background);
+    color: var(--colour-fg-1);
+    background-color: var(--colour-bg-1);
     border: none;
     border-radius: 1rem;
     font-family: Overpass;
     font-weight: normal;
     font-size: 1rem;
+
+    &[type="button"] {
+        background-color: var(--colour-action);
+
+        &:hover {
+            background-color: var(--colour-bg-1);
+        }
+
+        &:active {
+            background-color: var(--colour-action);
+        }
+    }
 }
 
-input[type="button"] {
-    background-color: var(--button-background);
-}
-
-input[type="button"]:hover {
-    background-color: var(--default-background);
-}
-
-input[type="button"]:active {
-    background-color: var(--button-background);
-}

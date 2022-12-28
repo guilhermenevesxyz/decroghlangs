@@ -1,0 +1,194 @@
+/* Overpass font */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
+/* Overpass Mono font */
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Overpass:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  /* Colour variables */
+  --colour-bg-1: #343434;
+  --colour-bg-2: #141414;
+  --colour-fg-1: white;
+  --colour-fg-2: #64F295;
+  --colour-attention: #000000;
+  --colour-action: #249255;
+}
+
+/* Default styles */
+* {
+  font-family: "Overpass Mono";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--colour-bg-1);
+}
+
+header {
+  margin: 0;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(52, 52, 52, 0.8);
+  border-bottom: 0.15rem solid var(--colour-bg-2);
+  backdrop-filter: blur(1rem);
+}
+
+article {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+footer {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--colour-bg-2);
+}
+footer > p {
+  font-size: 0.9rem;
+}
+
+.section {
+  border-bottom: 0.15rem solid var(--colour-bg-2);
+}
+
+a {
+  font-family: Overpass;
+  color: var(--colour-fg-2);
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 1rem;
+  color: var(--colour-fg-1);
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 1rem;
+  padding: 0;
+  color: var(--colour-fg-1);
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.faq-question {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: rgb(52, 52, 52);
+  box-shadow: 0 0 1.5rem rgb(10, 10, 10);
+  border-radius: 1.5rem;
+}
+.faq-question > * {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: var(--colour-bg-2);
+  border-radius: 1rem;
+}
+
+/* 44rem is the width of the containers plus */
+/* the margin                                */
+@media only screen and (max-width: 44rem) {
+  .container {
+    margin: 1rem;
+    width: auto;
+  }
+  .faq-question {
+    flex-direction: column;
+  }
+}
+h1 {
+  margin: 0.5rem;
+  color: var(--colour-fg-2);
+  font-family: Overpass;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+p {
+  margin: 0.5rem;
+  color: var(--colour-fg-1);
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+ul {
+  margin: 0.5rem;
+  padding: 0;
+}
+
+li {
+  margin: 0.5rem;
+  color: var(--colour-fg-1);
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+#toplangschart {
+  font-family: "Overpass Mono";
+}
+
+label {
+  margin: 0.5rem;
+  display: inline-block;
+  color: var(--colour-fg-1);
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: var(--colour-fg-1);
+  background-color: var(--colour-bg-1);
+  border: none;
+  border-radius: 1rem;
+  font-family: Overpass;
+  font-weight: normal;
+  font-size: 1rem;
+}
+input[type=button] {
+  background-color: var(--colour-action);
+}
+input[type=button]:hover {
+  background-color: var(--colour-bg-1);
+}
+input[type=button]:active {
+  background-color: var(--colour-action);
+}
+
+/*# sourceMappingURL=main.css.map */
