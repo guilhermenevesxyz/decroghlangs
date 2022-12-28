@@ -26,29 +26,20 @@
             </div>
 
             <div class="section">
-                <div class="container">
+                <div class="card">
                     <p>
                         Fill in the form below,
                         then click the button
                         in order to get your desired data.
                     </p>
             
-                    <div>
-                        <label for="form_ghusername">
-                            GitHub username
-                        </label>
-
-                        <input
-                            id="form_ghusername"
-                            type="text"
-                            value="myawesomeusername"
-                        >
-
+                    <form>
+                        <input id="form_ghusername" type="text" value="GitHub username">
                         <input id="form_submit" type="button" value="Submit">
-                    </div>
+                    </form>
                 </div>
 
-                <div class="container">
+                <div class="card">
                     <p id="toplangschart">
                         The results will appear here once they are loaded...
                     </p>
@@ -56,33 +47,37 @@
             </div>
 
             <div class="section">
-                <div class="faq-question">
-                    <h3>I don't see my results!</h3>
+                <div class="card">
+                    <div class="faq-question">
+                        <h3>I don't see my results!</h3>
 
-                    <div>
-                        <p>
-                            If you don't see your results,
-                            here are some precautions to take:
-                        </p>
+                        <div>
+                            <p>
+                                If you don't see your results,
+                                here are some precautions to take:
+                            </p>
 
-                        <ul>
-                            <li>Check the username's spelling;</li>
-                            <li>Check whether the user actually exists;</li>
-                            <li>Make sure the user has public repositories;</li>
-                            <li>Wait awhile and try again later.</li>
-                        </ul>
+                            <ul>
+                                <li>Check the username's spelling;</li>
+                                <li>Check whether the user actually exists;</li>
+                                <li>Make sure the user has public repositories;</li>
+                                <li>Wait awhile and try again later.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="faq-question">
-                    <h3>My results seem to be inaccurate!</h3>
-                    
-                    <p>
-                        In case your results seem to be inaccurate,
-                        check if the user has many repositories.
-                        Currently, this tool will only check
-                        the 50 most recent ones.
-                    </p>
+                <div class="card">
+                    <div class="faq-question">
+                        <h3>My results seem to be inaccurate!</h3>
+                        
+                        <p>
+                            In case your results seem to be inaccurate,
+                            check if the user has many repositories.
+                            Currently, this tool will only check
+                            the 50 most recent ones.
+                        </p>
+                    </div>
                 </div>
             </div>
         </article>

@@ -7,9 +7,12 @@
   --colour-fg-1: rgb(215, 215, 215);
   --colour-fg-2: rgb(230, 230, 230);
   --colour-action: rgb(225, 100, 85);
+  --colour-transparent: rgba(255, 255, 255, 0);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,90 +52,51 @@ footer {
   background-color: var(--colour-bg-2);
 }
 footer > p {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-.section {
-  border-bottom: 0.15rem solid var(--colour-bg-2);
-}
-
-a {
+h1 {
+  margin: 0.5rem;
+  padding: 0;
   font-family: "JetBrains Mono";
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--colour-fg-2);
-}
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 h2 {
   margin: 1rem;
-  color: var(--colour-fg-1);
+  padding: 0;
   font-family: "JetBrains Mono";
-  font-weight: normal;
   font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--colour-fg-1);
 }
 
 h3 {
   margin: 1rem;
   padding: 0;
-  color: var(--colour-fg-1);
   font-family: "JetBrains Mono";
-  font-weight: normal;
   font-size: 1.5rem;
+  font-weight: normal;
   text-align: center;
-}
-
-.faq-question {
-  margin: 2rem 1rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  background-color: var(--colour-bg-2);
-  box-shadow: 0 0.5rem 1.5rem var(--colour-bg-2);
-  border-radius: 1.5rem;
-}
-.faq-question > * {
-  flex: 1;
-  width: 100%;
-}
-
-.container {
-  width: 40rem;
-  margin: 1rem auto;
-  padding: 1rem;
-  background-color: var(--colour-bg-2);
-  border-radius: 1rem;
-}
-
-/* 44rem is the width of the containers plus */
-/* the margin                                */
-@media only screen and (max-width: 44rem) {
-  .container {
-    margin: 1rem;
-    width: auto;
-  }
-  .faq-question {
-    flex-direction: column;
-  }
-}
-h1 {
-  margin: 0.5rem;
-  color: var(--colour-fg-2);
-  font-family: "JetBrains Mono";
-  font-weight: bold;
-  font-size: 2rem;
+  color: var(--colour-fg-1);
 }
 
 p {
   margin: 0.5rem;
-  color: var(--colour-fg-1);
   font-family: "JetBrains Mono";
-  font-weight: normal;
   font-size: 1rem;
+  font-weight: normal;
+  color: var(--colour-fg-1);
+}
+
+a {
+  color: var(--colour-fg-2);
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 ul {
@@ -142,45 +106,76 @@ ul {
 
 li {
   margin: 0.5rem;
-  color: var(--colour-fg-1);
+  padding: 0;
   font-family: "JetBrains Mono";
-  font-weight: normal;
   font-size: 1rem;
+  font-weight: normal;
+  color: var(--colour-fg-1);
+}
+
+form {
+  display: inline-block;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 0.15rem;
+  border-radius: 0.5rem;
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+  font-weight: normal;
+}
+input[type=text] {
+  color: var(--colour-fg-1);
+  background-color: var(--colour-transparent);
+  border-color: var(--colour-fg-1);
+}
+input[type=button] {
+  color: var(--colour-action);
+  background-color: var(--colour-transparent);
+  border-color: var(--colour-action);
+  transition: color 0.25s, background-color 0.25s;
+}
+input[type=button]:hover {
+  color: var(--colour-bg-2);
+  background-color: var(--colour-action);
+  cursor: pointer;
 }
 
 #toplangschart {
   font-family: "JetBrains Mono";
 }
 
-label {
-  margin: 0.5rem;
-  display: inline-block;
-  color: var(--colour-fg-1);
-  font-family: "JetBrains Mono";
-  font-weight: normal;
-  font-size: 1rem;
+.section {
+  border-bottom: 0.15rem solid var(--colour-bg-2);
 }
 
-input {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  display: inline-block;
-  color: var(--colour-fg-1);
-  background-color: var(--colour-bg-1);
-  border: none;
+.card {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  background-color: var(--colour-bg-2);
   border-radius: 1rem;
-  font-family: "JetBrains Mono";
-  font-weight: normal;
-  font-size: 1rem;
+  box-shadow: 0 0.5rem 1.5rem var(--colour-bg-2);
 }
-input[type=button] {
-  background-color: var(--colour-action);
+
+.faq-question {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
-input[type=button]:hover {
-  background-color: var(--colour-bg-1);
+.faq-question > * {
+  flex: 1;
+  width: 100%;
 }
-input[type=button]:active {
-  background-color: var(--colour-action);
+
+@media only screen and (max-width: 42rem) {
+  .faq-question {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

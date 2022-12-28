@@ -3,6 +3,18 @@
 
 $font-1: "JetBrains Mono";
 
+$fontsize-medium: 1rem;
+$fontsize-big: 1.5rem;
+$fontsize-extra-big: 2rem;
+
+$borderradius: 1rem;
+
+$linewidth: 0.15rem;
+
+$transitiontime: 0.25s;
+
+$articlemaxwidth: 40rem;
+
 :root {
     /* Colour variables */
     --colour-bg-1: rgb(25, 25, 25);
@@ -10,9 +22,12 @@ $font-1: "JetBrains Mono";
     --colour-fg-1: rgb(215, 215, 215);
     --colour-fg-2: rgb(230, 230, 230);
     --colour-action: rgb(225, 100, 85);
+    --colour-transparent: rgba(255, 255, 255, 0);
 }
 
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,7 +49,7 @@ header {
 }
 
 article {
-    max-width: 40rem;
+    max-width: $articlemaxwidth;
     margin: 1rem auto;
     padding: 1rem;
     display: flex;
@@ -52,95 +67,53 @@ footer {
     background-color: var(--colour-bg-2);
 
     & > p {
-        font-size: 0.9rem;
+        font-size: $fontsize-medium;
     }
 }
 
-.section {
-    border-bottom: 0.15rem solid var(--colour-bg-2);
+h1 {
+    margin: 0.5rem;
+    padding: 0;
+    font-family: $font-1;
+    font-size: $fontsize-extra-big;
+    font-weight: bold;
+    color: var(--colour-fg-2);
+}
+
+h2 {
+    margin: 1rem;
+    padding: 0;
+    font-family: $font-1;
+    font-size: $fontsize-big;
+    font-weight: normal;
+    color: var(--colour-fg-1);
+}
+
+h3 {
+    margin: 1rem;
+    padding: 0;
+    font-family: $font-1;
+    font-size: $fontsize-big;
+    font-weight: normal;
+    text-align: center;
+    color: var(--colour-fg-1);
+}
+
+p {
+    margin: 0.5rem;
+    font-family: $font-1;
+    font-size: $fontsize-medium;
+    font-weight: normal;
+    color: var(--colour-fg-1);
 }
 
 a {
-    font-family: $font-1;
     color: var(--colour-fg-2);
 
     &:hover {
         text-decoration: underline;
         cursor: pointer;
     }
-}
-
-h2 {
-    margin: 1rem;
-    color: var(--colour-fg-1);
-    font-family: $font-1;
-    font-weight: normal;
-    font-size: 1.5rem;
-}
-
-h3 {
-    margin: 1rem;
-    padding: 0;
-    color: var(--colour-fg-1);
-    font-family: $font-1;
-    font-weight: normal;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.faq-question {
-    margin: 2rem 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    background-color: var(--colour-bg-2);
-    box-shadow: 0 0.5rem 1.5rem var(--colour-bg-2);
-    border-radius: 1.5rem;
-
-    & > * {
-        flex: 1;
-        width: 100%;
-    }
-}
-
-.container {
-    width: 40rem;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: var(--colour-bg-2);
-    border-radius: 1rem;
-}
-
-/* 44rem is the width of the containers plus */
-/* the margin                                */
-@media only screen and (max-width: 44rem) {
-    .container {
-        margin: 1rem;
-        width: auto;
-    }
-
-    .faq-question {
-        flex-direction: column;
-    }
-}
-
-h1 {
-    margin: 0.5rem;
-    color: var(--colour-fg-2);
-    font-family: $font-1;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-p {
-    margin: 0.5rem;
-    color: var(--colour-fg-1);
-    font-family: $font-1;
-    font-weight: normal;
-    font-size: 1rem;
 }
 
 ul {
@@ -150,47 +123,79 @@ ul {
 
 li {
     margin: 0.5rem;
-    color: var(--colour-fg-1);
+    padding: 0;
     font-family: $font-1;
+    font-size: $fontsize-medium;
     font-weight: normal;
-    font-size: 1rem;
+    color: var(--colour-fg-1);
+}
+
+form {
+    display: inline-block;
+}
+
+input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: $linewidth;
+    border-radius: calc($borderradius / 2);
+    font-family: $font-1;
+    font-size: $fontsize-medium;
+    font-weight: normal;
+
+    &[type="text"] {
+        color: var(--colour-fg-1);
+        background-color: var(--colour-transparent);
+        border-color: var(--colour-fg-1);
+    }
+
+    &[type="button"] {
+        color: var(--colour-action);
+        background-color: var(--colour-transparent);
+        border-color: var(--colour-action);
+        transition: color $transitiontime, background-color $transitiontime;
+
+        &:hover {
+            color: var(--colour-bg-2);
+            background-color: var(--colour-action);
+            cursor: pointer;
+        }
+    }
 }
 
 #toplangschart {
     font-family: $font-1;
 }
 
-label {
-    margin: 0.5rem;
-    display: inline-block;
-    color: var(--colour-fg-1);
-    font-family: $font-1;
-    font-weight: normal;
-    font-size: 1rem;
+.section {
+    border-bottom: $linewidth solid var(--colour-bg-2);
 }
 
-input {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    display: inline-block;
-    color: var(--colour-fg-1);
-    background-color: var(--colour-bg-1);
-    border: none;
-    border-radius: 1rem;
-    font-family: $font-1;
-    font-weight: normal;
-    font-size: 1rem;
+.card {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    background-color: var(--colour-bg-2);
+    border-radius: $borderradius;
+    box-shadow: 0 0.5rem 1.5rem var(--colour-bg-2);
+}
 
-    &[type="button"] {
-        background-color: var(--colour-action);
+.faq-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 
-        &:hover {
-            background-color: var(--colour-bg-1);
-        }
+    & > * {
+        flex: 1;
+        width: 100%;
+    }
+}
 
-        &:active {
-            background-color: var(--colour-action);
-        }
+@media only screen and (max-width: calc($articlemaxwidth + 2rem)) {
+    .faq-question {
+        flex-direction: column;
     }
 }
 
