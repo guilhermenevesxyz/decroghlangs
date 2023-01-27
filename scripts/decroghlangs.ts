@@ -60,9 +60,11 @@ const get_languages_percentage = async (): Promise<Map<string, number>> => {
 };
 
 const update_chart = async () => {
+    let chart = document.getElementById("toplangschart");
+    chart.innerHTML = "Loading results...";
+    
     const languages_percentage = await get_languages_percentage();
     
-    let chart = document.getElementById("toplangschart");
     chart.innerHTML = "";
     
     languages_percentage.forEach((percentage: number, language: string) => {
@@ -74,8 +76,13 @@ const update_chart = async () => {
 
         chart.innerHTML += "] " + percentage + "% " + language + "<br>";
     });
+    
+    return false;
 };
 
 window.onload = () => {
-    document.getElementById("form_submit").onclick = update_chart;
+    document.getElementById("form_container").onsubmit = (event) => {
+        event.preventDefault();
+        update_chart();
+    };
 };

@@ -122,13 +122,15 @@ var get_languages_percentage = function () { return __awaiter(_this, void 0, voi
     });
 }); };
 var update_chart = function () { return __awaiter(_this, void 0, void 0, function () {
-    var languages_percentage, chart;
+    var chart, languages_percentage;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, get_languages_percentage()];
+            case 0:
+                chart = document.getElementById("toplangschart");
+                chart.innerHTML = "Loading results...";
+                return [4 /*yield*/, get_languages_percentage()];
             case 1:
                 languages_percentage = _a.sent();
-                chart = document.getElementById("toplangschart");
                 chart.innerHTML = "";
                 languages_percentage.forEach(function (percentage, language) {
                     chart.innerHTML += "[";
@@ -137,10 +139,13 @@ var update_chart = function () { return __awaiter(_this, void 0, void 0, functio
                     }
                     chart.innerHTML += "] " + percentage + "% " + language + "<br>";
                 });
-                return [2 /*return*/];
+                return [2 /*return*/, false];
         }
     });
 }); };
 window.onload = function () {
-    document.getElementById("form_submit").onclick = update_chart;
+    document.getElementById("form_container").onsubmit = function (event) {
+        event.preventDefault();
+        update_chart();
+    };
 };

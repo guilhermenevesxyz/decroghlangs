@@ -151,7 +151,7 @@ input {
         border-color: var(--colour-fg-1);
     }
 
-    &[type="button"] {
+    &[type="submit"] {
         color: var(--colour-action);
         background-color: var(--colour-transparent);
         border-color: var(--colour-action);
