@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "ES2017",
+            "dom"
+        ],
+        "outFile": "scripts/decroghlangs.js"
+    },
+    
+    "include": ["./scripts/*.ts"]
+}
