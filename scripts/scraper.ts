@@ -45,7 +45,7 @@ const get_languages_percentage = async (): Promise<Map<string, number>> => {
             cross-multiplication
 
             total_bytes_of_code ------------------- 100%
-            written_bytes ------------------------- x%
+            written_bytes ------------------------- x%git@github.com:guilhermenevesxyz/collatzover.git
             
             x = 100 * written_bytes / total_bytes_of_code
         */

@@ -6,6 +6,7 @@ $font-1: "JetBrains Mono";
 $fontsize-medium: 1rem;
 $fontsize-big: 1.5rem;
 $fontsize-extra-big: 2rem;
+$fontsize-extra-extra-big: 3rem;
 
 $borderradius: 1rem;
 
@@ -25,6 +26,13 @@ $articlemaxwidth: 40rem;
     --colour-transparent: rgba(255, 255, 255, 0);
 }
 
+.lighttheme {
+	--colour-bg-1: rgb(245, 245, 245);
+    --colour-bg-2: rgb(225, 225, 225);
+    --colour-fg-1: rgb(35, 35, 35);
+    --colour-fg-2: rgb(15, 15, 15);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -40,12 +48,27 @@ header {
     padding: 1rem;
     position: sticky;
     top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     background-color: rgba(var(--colour-bg-1), 0.8);
     border-bottom: 0.15rem solid var(--colour-bg-2);
 	backdrop-filter: blur(1rem);
+	
+	& > #headermenu {
+	    margin: auto;
+	    max-width: $articlemaxwidth;
+	    display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+	    
+	    & > button {
+		    all: unset;
+		    cursor: pointer;
+		    font-family: $font-1;
+		    font-weight: bold;
+		    font-size: $fontsize-extra-extra-big;
+		    color: var(--colour-fg-1);
+	    }
+	}
 }
 
 article {

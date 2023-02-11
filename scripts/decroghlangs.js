@@ -109,7 +109,7 @@ var get_languages_percentage = function () { return __awaiter(_this, void 0, voi
                         cross-multiplication
             
                         total_bytes_of_code ------------------- 100%
-                        written_bytes ------------------------- x%
+                        written_bytes ------------------------- x%git@github.com:guilhermenevesxyz/collatzover.git
                         
                         x = 100 * written_bytes / total_bytes_of_code
                     */
@@ -149,3 +149,17 @@ window.onload = function () {
         update_chart();
     };
 };
+var ts = document.getElementById("themeswitch");
+if (localStorage.getItem("lightTheme") === "on") {
+    document.body.classList.add("lighttheme");
+}
+ts.addEventListener("click", function () {
+    if (localStorage.getItem("lightTheme") !== "on") {
+        document.body.classList.add("lighttheme");
+        localStorage.setItem("lightTheme", "on");
+    }
+    else {
+        document.body.classList.remove("lighttheme");
+        localStorage.setItem("lightTheme", "null");
+    }
+});
